@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightning Fossette Games | Roblox Game Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightning Fossette Games | Roblox Game Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Lightning Fossette Games</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#devs">Meet the Devs</a>
-            <a href="#games">Our Games</a>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I’m [Your Name], the founder of Lightning Fossette Games. I create fun Roblox games that everyone can enjoy. Welcome to our official studio site!</p>
-    </section>
+  <!-- Header -->
+  <header>
+    <h1>Lightning Fossette Games</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#devs">Meet the Devs</a>
+      <a href="#games">Our Games</a>
+    </nav>
+  </header>
 
-    <section id="devs">
-        <h2>Meet the Devs</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="dev1.png" alt="NicoBul2">
-                <h3>NicoBul2</h3>
-                <p>Lead Developer</p>
-            </div>
-            <div class="card">
-                <img src="dev2.png" alt="JTSbro">
-                <h3>JTSbro</h3>
-                <p>Game Designer</p>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Lightning Fossette Games!</h2>
+    <p>Creating fun Roblox games with passion. Stay tuned for our first releases!</p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I’m [Your Name], the founder of Lightning Fossette Games. I create fun Roblox games that everyone can enjoy. Welcome to our official studio site!</p>
+  </section>
+
+  <!-- Meet the Devs -->
+  <section id="devs">
+    <h2>Meet the Devs</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="dev1.png" alt="NicoBul2">
+            <h3>NicoBul2</h3>
+            <p>Lead Developer</p>
+          </div>
+          <div class="card-back">
+            <p>Expert in scripting and creating exciting Roblox experiences.</p>
+          </div>
         </div>
-    </section>
-
-    <section id="games">
-        <h2>Our Games</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="placeholder.png" alt="No games yet">
-                <h3>No Games Yet</h3>
-                <p>Stay tuned! Our first Roblox games are coming soon.</p>
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="dev2.png" alt="JTSbro">
+            <h3>JTSbro</h3>
+            <p>Game Designer</p>
+          </div>
+          <div class="card-back">
+            <p>Loves building immersive worlds and designing fun game mechanics.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Lightning Fossette Games | Follow us on Roblox and socials!</p>
-    </footer>
+  <!-- Our Games -->
+  <section id="games">
+    <h2>Our Games</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="placeholder.png" alt="No games yet">
+        <h3>No Games Yet</h3>
+        <p>Stay tuned! Our first Roblox games are coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Lightning Fossette Games | Follow us on Roblox and socials!</p>
+  </footer>
+
+  <!-- JS for smooth scrolling -->
+  <script>
+    const links = document.querySelectorAll('nav a');
+    for (const link of links) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  </script>
+
 </body>
 </html>
